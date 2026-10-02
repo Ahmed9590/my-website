@@ -1,0 +1,566 @@
+diabetes-en.html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diabetes: A Scientific Guide for Awareness and Prevention</title>
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Diabetes: A Scientific Guide for Awareness and Prevention">
+<meta property="og:description" content="A comprehensive scientific guide about diabetes: types, early symptoms, complications, and prevention with an inspiring narrative approach.">
+<meta property="og:url" content="https://ahmed9590.github.io/my-website/diabetes-en.html">
+<meta property="og:image" content="https://ahmed9590.github.io/my-website/diabetes-cover.jpg">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Diabetes: A Scientific Guide for Awareness and Prevention">
+<meta name="twitter:description" content="A comprehensive scientific guide about diabetes with an inspiring narrative approach.">
+<meta name="twitter:image" content="https://ahmed9590.github.io/my-website/diabetes-cover.jpg">
+
+<style>
+:root {
+  --navy: #0a2540;
+  --gold: #c9a961;
+  --white: #ffffff;
+  --soft: #f7f9fc;
+  --text: #2c3e50;
+  --muted: #7f8c9a;
+  --line: #e5eaf0;
+  --green: #27ae60;
+  --red: #e63946;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+  background: var(--soft);
+  color: var(--text);
+  line-height: 1.9;
+  font-size: 18px;
+}
+
+.hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    linear-gradient(45deg, rgba(201,169,97,0.05) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(201,169,97,0.05) 25%, transparent 25%);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  position: relative;
+  letter-spacing: -0.5px;
+}
+
+.hero .underline {
+  width: 80px;
+  height: 3px;
+  background: var(--gold);
+  margin: 20px auto;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--gold);
+  position: relative;
+  font-weight: 500;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.lang-btn {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 8px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 2px 10px rgba(201,169,97,0.3);
+}
+
+.lang-btn:hover {
+  background: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(201,169,97,0.5);
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+section {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 36px 32px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 14px rgba(10,37,64,0.06);
+  border: 1px solid var(--line);
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--navy);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--gold);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin: 24px 0 12px;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 16px;
+  color: var(--text);
+  text-align: justify;
+}
+
+ul, ol {
+  margin: 16px 0 16px 24px;
+  padding-left: 16px;
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+.quote {
+  background: var(--soft);
+  border-left: 4px solid var(--gold);
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-radius: 8px;
+  font-style: italic;
+  color: var(--navy);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.story {
+  background: linear-gradient(135deg, #fef9f0 0%, #fdf5e6 100%);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px 0;
+  border-left: 4px solid var(--gold);
+}
+
+.story h3 {
+  margin-top: 0;
+  color: var(--navy);
+}
+
+.plate {
+  background: var(--soft);
+  border: 2px dashed var(--gold);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 2.2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+th {
+  background: var(--navy);
+  color: var(--white);
+  padding: 14px;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) { background: var(--soft); }
+
+.warning {
+  background: #fff5f5;
+  border-left: 4px solid var(--red);
+  padding: 20px 24px;
+  border-radius: 8px;
+  margin: 24px 0;
+  color: #721c24;
+  font-weight: 500;
+}
+
+.sources {
+  background: var(--soft);
+  padding: 24px;
+  border-radius: 10px;
+  margin-top: 24px;
+  font-size: 0.95rem;
+}
+
+.sources li { color: var(--muted); }
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.95rem;
+}
+
+.footer a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .hero { padding: 60px 16px; }
+  .hero h1 { font-size: 1.9rem; }
+  .hero p { font-size: 1rem; }
+  .container { padding: 24px 16px 60px; }
+  section { padding: 24px 20px; }
+  h2 { font-size: 1.35rem; }
+  h3 { font-size: 1.1rem; }
+  table { font-size: 0.92rem; }
+  th, td { padding: 10px 8px; }
+  .lang-switch { top: 16px; right: 16px; }
+  .lang-btn { padding: 6px 14px; font-size: 0.85rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="lang-switch">
+    <a href="diabetes.html" class="lang-btn">🇸🇦 العربية</a>
+  </div>
+  <h1>🩺 Diabetes</h1>
+  <div class="underline"></div>
+  <p>A Scientific Guide for Awareness and Prevention</p>
+</header>
+
+<main class="container">
+
+  <section>
+    <h2>✨ Introduction: A Story That Began With Strange Thirst</h2>
+    <p>One morning, <strong>Salem</strong> — a man in his forties — woke up feeling strangely thirsty. He drank a glass of water, then another, then a third. At first, he didn't pay attention, busy with his life. But two weeks later, he noticed he was waking up several times at night to drink and urinate, and his weight was dropping even though he ate normally. 😕</p>
+    <p>He decided to visit the doctor. After simple tests, the diagnosis came: <strong>Type 2 Diabetes</strong>. 🩸</p>
+    <p>In that moment, Salem felt his world collapse. He imagined the worst: needles, medications, deprivation, perhaps blindness or foot amputation. 😨 But the doctor looked at him calmly and said one sentence that changed his life:</p>
+    <div class="quote">💬 "Salem, diabetes is not the end of the world. It's the beginning of a new life — if you want it."</div>
+    <p>This article tells what Salem learned over five years, and what you can learn too. <strong>It's not an article about a disease, but about life.</strong> ✨</p>
+  </section>
+
+  <section>
+    <h2>🔬 First: What Is Diabetes?</h2>
+    <p>Imagine your body is a <strong>huge factory</strong> 🏭. Every cell in it needs energy to work. This energy comes from <strong>sugar</strong> (glucose) in the blood.</p>
+    <p>But sugar cannot enter cells alone. It needs a <strong>key</strong> 🔑 — and that key is called <strong>insulin</strong>, a hormone produced by the pancreas.</p>
+    <p>In diabetes, there's a problem with this key:</p>
+    <ul>
+      <li>🩸 <strong>Type 1:</strong> The pancreas doesn't produce the key at all.</li>
+      <li>🩸 <strong>Type 2:</strong> The key exists, but cells have become "unresponsive" to it (insulin resistance).</li>
+      <li>🩸 <strong>Gestational diabetes:</strong> Appears during pregnancy, usually disappears after birth.</li>
+    </ul>
+    <p>In all types, the result: <strong>sugar accumulates in the blood</strong>, instead of entering cells to produce energy. ⚠️</p>
+    <div class="quote">🎯 And here's the good news: the body <strong>can learn again</strong>. With proper nutrition, movement, and commitment to treatment, diabetes can be controlled and a full life can be lived. 💙</div>
+  </section>
+
+  <section>
+    <h2>📚 Second: The Three Types — Through Human Stories</h2>
+
+    <div class="story">
+      <h3>🌟 Ahmed — Type 1</h3>
+      <p>Ahmed is a ten-year-old boy. He was diagnosed with Type 1 at age six. But today:</p>
+      <ul>
+        <li>⚽ Plays soccer in his school team.</li>
+        <li>📚 Excels in his studies.</li>
+        <li>😄 Carries his insulin device like his phone.</li>
+      </ul>
+      <div class="quote">💬 Ahmed said: "Diabetes isn't a flaw. It's just something I have to take care of."</div>
+    </div>
+
+    <div class="story">
+      <h3>🌟 Fatima — Type 2</h3>
+      <p>Fatima is a mother of four, diagnosed with Type 2 at fifty. Today:</p>
+      <ul>
+        <li>🍳 Runs a successful restaurant.</li>
+        <li>🚶 Walks 30 minutes daily.</li>
+        <li>💙 Her sugar is controlled.</li>
+      </ul>
+      <div class="quote">💬 Fatima said: "I learned that the kitchen can be my medicine, not my enemy."</div>
+    </div>
+
+    <div class="story">
+      <h3>🌟 Noura — Gestational Diabetes</h3>
+      <p>Noura was diagnosed with gestational diabetes in her sixth month. She committed to her diet and gave birth to a healthy baby. Today:</p>
+      <ul>
+        <li>🚶 Walks every morning.</li>
+        <li>🩺 Checks her sugar annually.</li>
+        <li>🌟 Educates her pregnant friends.</li>
+      </ul>
+      <div class="quote">💬 Noura said: "Gestational diabetes was a warning. I listened, and changed my life."</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🚨 Third: 7 Warning Signs — Gently, Not Frighteningly</h2>
+    <p>You may not feel anything at first. This is what makes diabetes a <strong>"silent friend"</strong> 🤫. But your body — gently — sends signals:</p>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Sign</th><th>Explanation</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>💧</td><td>Severe thirst</td><td>Your body asks for more water to flush excess sugar</td></tr>
+        <tr><td>🚻</td><td>Frequent urination</td><td>The body's way to expel excess sugar</td></tr>
+        <tr><td>🍽️</td><td>Constant hunger</td><td>Your cells aren't getting energy despite eating</td></tr>
+        <tr><td>⚖️</td><td>Weight loss</td><td>Your cells are "starving," so they eat your fat</td></tr>
+        <tr><td>😴</td><td>Fatigue and exhaustion</td><td>Energy isn't reaching your cells efficiently</td></tr>
+        <tr><td>🩹</td><td>Slow wound healing</td><td>Blood circulation is affected</td></tr>
+        <tr><td>🦶</td><td>Numbness in extremities</td><td>Nerves need extra care</td></tr>
+      </tbody>
+    </table>
+    <div class="quote">🎯 The good news: all these signs <strong>can be managed</strong>, and if discovered early, results are much better.</div>
+  </section>
+
+  <section>
+    <h2>⚠️ Fourth: Complications — Honestly, But With Hope</h2>
+    <p>If diabetes is neglected for years, complications may occur. <strong>But — and this is an important word — if you take care of it, they can be avoided or delayed for many years.</strong> 💙</p>
+    <table>
+      <thead>
+        <tr><th>Organ</th><th>Complications</th><th>Prevention</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>🫀 Heart</td><td>Heart attacks, strokes</td><td>Exercise, blood pressure control</td></tr>
+        <tr><td>👁️ Eyes</td><td>Retinopathy, vision loss</td><td>Annual checkup</td></tr>
+        <tr><td>🦵 Feet</td><td>Wounds, infection, amputation</td><td>Daily foot care</td></tr>
+        <tr><td>🫘 Kidneys</td><td>Kidney failure, dialysis</td><td>Periodic testing</td></tr>
+        <tr><td>🧠 Nerves</td><td>Numbness, chronic pain</td><td>Sugar control</td></tr>
+      </tbody>
+    </table>
+    <div class="quote">🎯 The message: Complications aren't inevitable. <strong>They are choices.</strong> Whoever controls their sugar, protects their organs. ✅</div>
+  </section>
+
+  <section>
+    <h2>🎯 Fifth: Risk Factors — Who Controls Them?</h2>
+    <h3>🔴 Factors you can't control:</h3>
+    <ul>
+      <li>Age (over 45).</li>
+      <li>Family history.</li>
+      <li>Ethnicity (some groups are more susceptible).</li>
+    </ul>
+    <h3>🟢 Factors you fully control:</h3>
+    <ul>
+      <li>⚖️ Your weight.</li>
+      <li>🏃 Your activity.</li>
+      <li>🍽️ Your food.</li>
+      <li>😴 Your sleep.</li>
+      <li>😰 Your stress.</li>
+      <li>🚬 Your smoking.</li>
+    </ul>
+    <div class="quote">🎁 Good news: The famous <strong>Diabetes Prevention Program</strong> study proved that losing just <strong>5-7%</strong> of body weight reduces Type 2 diabetes risk by <strong>58%</strong> — more than medications! 🌟</div>
+  </section>
+
+  <section>
+    <h2>🍎 Sixth: Food — Your Daily Medicine</h2>
+    <p>Here's the "crux of the matter" 🎯. <strong>Food isn't deprivation — it's discovery.</strong> 🌱</p>
+
+    <h3>🍽️ The Golden Rule: Your Plate = Your Pharmacy 💊</h3>
+    <div class="plate">
+      🥗 <strong>Half the plate:</strong> Colorful vegetables<br><br>
+      🍗 <strong>Quarter plate:</strong> Protein (chicken, fish)<br><br>
+      🍚 <strong>Quarter plate:</strong> Whole grains
+    </div>
+    <div class="quote">🎯 This simple rule <strong>replaces dozens of complicated diets</strong>.</div>
+
+    <h3>✅ 7 Diabetes-Friendly Foods</h3>
+    <p>These foods are <strong>not just allowed, but help you</strong> control sugar:</p>
+    <ol>
+      <li>🥣 <strong>Oats</strong> — slow sugar absorption.</li>
+      <li>🌿 <strong>Cinnamon</strong> — improves insulin sensitivity.</li>
+      <li>🥬 <strong>Leafy greens</strong> (spinach, cabbage, lettuce).</li>
+      <li>🫘 <strong>Legumes</strong> (lentils, beans, chickpeas).</li>
+      <li>🥜 <strong>Nuts</strong> (almonds, walnuts, hazelnuts).</li>
+      <li>🐟 <strong>Fatty fish</strong> (salmon, sardines, mackerel).</li>
+      <li>🥑 <strong>Avocado</strong> — healthy fats + fiber.</li>
+    </ol>
+    <div class="quote">🎯 Rule: Don't deprive yourself. <strong>Add</strong> these foods to your plate. 💚</div>
+
+    <h3>⚠️ 7 Foods to Watch Out For</h3>
+    <p>Not forbidden, but <strong>rare, small, and mindful</strong>:</p>
+    <ol>
+      <li>🥤 <strong>Soda drinks</strong> — fast liquid sugar.</li>
+      <li>🍰 <strong>White sweets</strong> (cake, cookies, donuts).</li>
+      <li>🍞 <strong>White bread</strong> — substitute: whole wheat.</li>
+      <li>🍚 <strong>White rice</strong> in large amounts — substitute: brown.</li>
+      <li>🧃 <strong>Canned juices</strong> — sugar + no fiber.</li>
+      <li>🍟 <strong>Fried foods</strong> — trans fats.</li>
+      <li>🥫 <strong>Ready-made sauces</strong> — hidden sugar!</li>
+    </ol>
+    <div class="quote">🎯 Message: Awareness is enough. <strong>No deprivation.</strong> 💙</div>
+
+    <h3>📊 Glycemic Index (GI) — In Simple Terms</h3>
+    <p>Every food has a <strong>"speed"</strong> in raising sugar:</p>
+    <ul>
+      <li>🟢 <strong>Slow (Low GI):</strong> Your friend. (lentils, oats, vegetables)</li>
+      <li>🟡 <strong>Medium (Medium GI):</strong> In moderate amounts. (brown rice, pasta)</li>
+      <li>🔴 <strong>Fast (High GI):</strong> Rarely. (white bread, sweets)</li>
+    </ul>
+    <div class="quote">🎯 The golden rule: 💬 "Slow is a friend. Fast is a guest."</div>
+
+    <h3>📅 A Practical Daily Schedule</h3>
+    <ul>
+      <li>🌅 <strong>Breakfast (7 AM):</strong> Oats + cinnamon + almonds, boiled egg, tea without sugar.</li>
+      <li>🍎 <strong>Snack (10 AM):</strong> An apple or a handful of almonds.</li>
+      <li>🍽️ <strong>Lunch (1 PM):</strong> Salad, grilled chicken, brown rice, yogurt.</li>
+      <li>🍏 <strong>Snack (4 PM):</strong> Carrots or cucumber.</li>
+      <li>🌙 <strong>Dinner (7 PM):</strong> Lentil soup, grilled fish, sautéed vegetables.</li>
+      <li>🌛 <strong>Before bed (10 PM):</strong> A glass of milk without sugar.</li>
+    </ul>
+    <div class="quote">🎯 Rule: 3 meals + 2 snacks. <strong>No hunger. No overeating.</strong></div>
+
+    <h3>🍳 Smart Substitution Tricks</h3>
+    <p>Instead of deprivation, use <strong>smart substitutions</strong>:</p>
+    <table>
+      <thead>
+        <tr><th>Instead of this</th><th>Use this</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>White sugar</td><td>Stevia or honey (carefully)</td></tr>
+        <tr><td>White bread</td><td>Whole wheat or oats</td></tr>
+        <tr><td>White rice</td><td>Brown rice or quinoa</td></tr>
+        <tr><td>Juice</td><td>Whole fruit</td></tr>
+        <tr><td>Frying</td><td>Grilling or steaming</td></tr>
+        <tr><td>Ready-made sauce</td><td>Lemon and thyme</td></tr>
+      </tbody>
+    </table>
+    <div class="quote">🎯 Message: It's not what you deprive yourself of. It's <strong>what you substitute.</strong> ✨</div>
+
+    <div class="story">
+      <h3>🎬 Fatima's Kitchen Story</h3>
+      <p>Let's return to <strong>Fatima</strong>, a mother of four, diagnosed with diabetes at fifty.</p>
+      <p>At first, she was afraid of the kitchen 😰. "How will I cook for my family? Will I deprive them?"</p>
+      <p>Then she learned one thing that changed everything:</p>
+      <div class="quote">💬 "The kitchen isn't an enemy. It's my medicine."</div>
+      <p>Today:</p>
+      <ul>
+        <li>🥗 She cooks the same dishes, but healthily.</li>
+        <li>🍽️ Her family eats with her — and enjoys it.</li>
+        <li>🩺 Her sugar is controlled.</li>
+        <li>🌟 She teaches her neighbors healthy cooking.</li>
+      </ul>
+      <div class="quote">💬 Fatima said: "I didn't deprive my family of anything. I gave them a better life." 💙</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🏃 Seventh: General Prevention — Small Steps</h2>
+    <p>You don't need to change your life in one day. <strong>Start with small steps:</strong></p>
+    <ol>
+      <li>🚶 <strong>One step every day.</strong> Walk just 10 minutes. Then increase gradually.</li>
+      <li>💧 <strong>Drink more water.</strong> Instead of juices.</li>
+      <li>😴 <strong>Sleep 7 hours.</strong> Good sleep regulates sugar.</li>
+      <li>🧘 <strong>Take 5 minutes to relax.</strong> Stress raises sugar.</li>
+      <li>🩺 <strong>Annual checkup.</strong> Simple, quick, life-saving.</li>
+    </ol>
+    <div class="quote">🎯 Message: Prevention isn't deprivation. <strong>It's a gift to your body.</strong> 💚</div>
+  </section>
+
+  <section>
+    <h2>🩺 Eighth: When to See a Doctor?</h2>
+    <p>If you notice any of the warning signs, <strong>don't fear the test</strong>.</p>
+    <div class="warning">⚠️ The real fear is <strong>delaying</strong>, not diagnosis.</div>
+    <div class="quote">🎁 One visit to the doctor = <strong>reassurance + clear plan + new beginning</strong>.</div>
+  </section>
+
+  <section>
+    <h2>🌟 Ninth: Conclusion — A Message of Hope</h2>
+    <p>Let's return to <strong>Salem</strong>, the hero of our story.</p>
+    <p>Five years after diagnosis:</p>
+    <ul>
+      <li>🏃 Exercises 5 days a week.</li>
+      <li>🥗 Eats with appetite, but mindfully.</li>
+      <li>👨‍👩‍👧 Lives with his family.</li>
+      <li>🌟 Works as a coach to educate new diabetes patients.</li>
+    </ul>
+    <div class="quote">💬 Salem said: "Diabetes didn't take my life. It gave me a better one, because I started caring more about myself."</div>
+    <h3>🎯 The Final Message:</h3>
+    <p>💙 You don't face diabetes alone. Millions around the world live full, happy, productive lives. <strong>And you can too.</strong></p>
+    <div class="quote">✨ Diabetes isn't an end. It's a new beginning — if you want it. 🌟</div>
+  </section>
+
+  <section>
+    <h2>📚 Scientific References</h2>
+    <div class="sources">
+      <ul>
+        <li>🌐 WHO — Diabetes Fact Sheet (2023)</li>
+        <li>🌐 IDF Diabetes Atlas — 10th Edition (2021)</li>
+        <li>🌐 CDC — Diabetes Basics &amp; Prevention</li>
+        <li>🌐 ADA — Standards of Care in Diabetes (2023)</li>
+        <li>🌐 NIH — Diabetes Overview</li>
+        <li>🌐 NEJM — Diabetes Complications &amp; Management</li>
+        <li>🌐 Diabetes Prevention Program (DPP) — NEJM, 2002</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>⚠️ Medical Disclaimer</h2>
+    <div class="warning">
+      <p><strong>📌 This content is for scientific awareness only, and does not replace consulting a specialist doctor.</strong></p>
+      <p>💊 Every diabetes case is unique. What suits one person may not suit another. <strong>Consult your doctor</strong> before any change in your diet or medication.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>🔗 <a href="https://ahmed9590.github.io/my-website">ahmed9590.github.io</a></p>
+  <p style="margin-top: 12px; opacity: 0.7;">📅 2026</p>
+</footer>
+
+</body>
+</html>
