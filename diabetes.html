@@ -1,0 +1,568 @@
+diabetes.html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>داء السكري: دليل علمي للتوعية والوقاية</title>
+
+<!-- Open Graph for Facebook -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="داء السكري: دليل علمي للتوعية والوقاية">
+<meta property="og:description" content="دليل علمي شامل عن داء السكري: الأنواع، الأعراض المبكرة، مضاعفاته، وطرق الوقاية بأسلوب سردي مُلهم.">
+<meta property="og:url" content="https://ahmed9590.github.io/my-website/diabetes.html">
+<meta property="og:image" content="https://ahmed9590.github.io/my-website/diabetes-cover.jpg">
+<meta property="og:locale" content="ar_AR">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="داء السكري: دليل علمي للتوعية والوقاية">
+<meta name="twitter:description" content="دليل علمي شامل عن داء السكري بأسلوب سردي مُلهم.">
+<meta name="twitter:image" content="https://ahmed9590.github.io/my-website/diabetes-cover.jpg">
+
+<style>
+:root {
+  --navy: #0a2540;
+  --gold: #c9a961;
+  --white: #ffffff;
+  --soft: #f7f9fc;
+  --text: #2c3e50;
+  --muted: #7f8c9a;
+  --line: #e5eaf0;
+  --green: #27ae60;
+  --red: #e63946;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
+  background: var(--soft);
+  color: var(--text);
+  line-height: 1.9;
+  font-size: 18px;
+}
+
+.hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    linear-gradient(45deg, rgba(201,169,97,0.05) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(201,169,97,0.05) 25%, transparent 25%);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  position: relative;
+  letter-spacing: -0.5px;
+}
+
+.hero .underline {
+  width: 80px;
+  height: 3px;
+  background: var(--gold);
+  margin: 20px auto;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--gold);
+  position: relative;
+  font-weight: 500;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.lang-btn {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 8px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 2px 10px rgba(201,169,97,0.3);
+}
+
+.lang-btn:hover {
+  background: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(201,169,97,0.5);
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+section {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 36px 32px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 14px rgba(10,37,64,0.06);
+  border: 1px solid var(--line);
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--navy);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--gold);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin: 24px 0 12px;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 16px;
+  color: var(--text);
+  text-align: justify;
+}
+
+ul, ol {
+  margin: 16px 0 16px 24px;
+  padding-right: 16px;
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+.quote {
+  background: var(--soft);
+  border-right: 4px solid var(--gold);
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-radius: 8px;
+  font-style: italic;
+  color: var(--navy);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.story {
+  background: linear-gradient(135deg, #fef9f0 0%, #fdf5e6 100%);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px 0;
+  border-right: 4px solid var(--gold);
+}
+
+.story h3 {
+  margin-top: 0;
+  color: var(--navy);
+}
+
+.plate {
+  background: var(--soft);
+  border: 2px dashed var(--gold);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 2.2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+th {
+  background: var(--navy);
+  color: var(--white);
+  padding: 14px;
+  text-align: right;
+  font-weight: 600;
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+}
+
+tr:last-child td { border-bottom: none; }
+
+tr:nth-child(even) { background: var(--soft); }
+
+.warning {
+  background: #fff5f5;
+  border-right: 4px solid var(--red);
+  padding: 20px 24px;
+  border-radius: 8px;
+  margin: 24px 0;
+  color: #721c24;
+  font-weight: 500;
+}
+
+.sources {
+  background: var(--soft);
+  padding: 24px;
+  border-radius: 10px;
+  margin-top: 24px;
+  font-size: 0.95rem;
+}
+
+.sources li { color: var(--muted); }
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.95rem;
+}
+
+.footer a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .hero { padding: 60px 16px; }
+  .hero h1 { font-size: 1.9rem; }
+  .hero p { font-size: 1rem; }
+  .container { padding: 24px 16px 60px; }
+  section { padding: 24px 20px; }
+  h2 { font-size: 1.35rem; }
+  h3 { font-size: 1.1rem; }
+  table { font-size: 0.92rem; }
+  th, td { padding: 10px 8px; }
+  .lang-switch { top: 16px; left: 16px; }
+  .lang-btn { padding: 6px 14px; font-size: 0.85rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="lang-switch">
+    <a href="diabetes-en.html" class="lang-btn">🇬🇧 English</a>
+  </div>
+  <h1>🩺 داء السكري</h1>
+  <div class="underline"></div>
+  <p>دليل علمي للتوعية والوقاية</p>
+</header>
+
+<main class="container">
+
+  <section>
+    <h2>✨ مقدمة: قصة بدأت بعطش غريب</h2>
+    <p>في صباح أحد الأيام، استيقظ <strong>سالم</strong> — رجل في الأربعين من عمره — وهو يشعر بعطش غريب. شرب كوب ماء، ثم آخر، ثم ثالثاً. لم يعر الأمر اهتماماً في البداية، فقد كان مشغولاً بحياته. لكن بعد أسبوعين، لاحظ أنه يستيقظ عدة مرات في الليل ليشرب ويتبول، وأن وزنه ينقص رغم أنه يأكل بشكل طبيعي. 😕</p>
+    <p>قرر زيارة الطبيب. وبعد تحاليل بسيطة، جاء التشخيص: <strong>داء السكري من النوع الثاني</strong>. 🩸</p>
+    <p>في تلك اللحظة، شعر سالم أن العالم انهار. تخيّل الأسوأ: الإبر، الأدوية، الحرمان، ربما العمى أو بتر القدم. 😨 لكن الطبيب نظر إليه بهدوء وقال جملة واحدة غيّرت حياته:</p>
+    <div class="quote">💬 "يا سالم، السكري ليس نهاية العالم. بل بداية حياة جديدة — إذا أردت."</div>
+    <p>هذه المقالة تحكي ما تعلّمه سالم خلال خمس سنوات، وما يمكن أن تتعلمه أنت أيضاً. <strong>ليست مقالة عن مرض، بل عن حياة.</strong> ✨</p>
+  </section>
+
+  <section>
+    <h2>🔬 أولاً: ما هو داء السكري؟</h2>
+    <p>تخيّل أن جسمك <strong>مصنع ضخم</strong> 🏭. كل خلية فيه تحتاج طاقة لتعمل. هذه الطاقة تأتي من <strong>السكر</strong> (الجلوكوز) الموجود في الدم.</p>
+    <p>لكن السكر لا يستطيع دخول الخلايا وحده. يحتاج إلى <strong>مفتاح</strong> 🔑 — وهذا المفتاح اسمه <strong>الأنسولين</strong>، وهو هرمون ينتجه البنكرياس.</p>
+    <p>في داء السكري، هناك مشكلة في هذا المفتاح:</p>
+    <ul>
+      <li>🩸 <strong>النوع الأول:</strong> البنكرياس لا ينتج المفتاح أصلاً.</li>
+      <li>🩸 <strong>النوع الثاني:</strong> المفتاح موجود، لكن الخلايا أصبحت "لا تستجيب له" (مقاومة الأنسولين).</li>
+      <li>🩸 <strong>سكري الحمل:</strong> يظهر أثناء الحمل، ويختفي عادة بعد الولادة.</li>
+    </ul>
+    <p>النتيجة في كل الأنواع: <strong>السكر يتراكم في الدم</strong>، بدل أن يدخل الخلايا لتوليد الطاقة. ⚠️</p>
+    <div class="quote">🎯 وهنا الخبر الجيد: الجسم <strong>قادر على التعلم من جديد</strong>. مع الغذاء الصحيح، والحركة، والالتزام بالعلاج، يمكن التحكم بالسكري والعيش حياة كاملة. 💙</div>
+  </section>
+
+  <section>
+    <h2>📚 ثانياً: الأنواع الثلاثة — عبر قصص بشرية</h2>
+
+    <div class="story">
+      <h3>🌟 أحمد — النوع الأول</h3>
+      <p>أحمد طفل في العاشرة. أُصيب بالنوع الأول منذ كان في السادسة. لكنه اليوم:</p>
+      <ul>
+        <li>⚽ يلعب كرة القدم في فريقه المدرسي.</li>
+        <li>📚 متفوق في دراسته.</li>
+        <li>😄 يحمل معه جهاز الأنسولين كأنه هاتفه.</li>
+      </ul>
+      <div class="quote">💬 قال أحمد: "السكري ليس عيباً. هو مجرد شيء يجب أن أهتم به."</div>
+    </div>
+
+    <div class="story">
+      <h3>🌟 فاطمة — النوع الثاني</h3>
+      <p>فاطمة أم لأربعة، أُصيبت بالنوع الثاني في الخمسين. اليوم:</p>
+      <ul>
+        <li>🍳 تُدير مطعماً ناجحاً.</li>
+        <li>🚶 تمشي 30 دقيقة يومياً.</li>
+        <li>💙 سكرها منتظم.</li>
+      </ul>
+      <div class="quote">💬 قالت فاطمة: "علمت أن الطبخ يمكن أن يكون دوائي، لا عدوي."</div>
+    </div>
+
+    <div class="story">
+      <h3>🌟 نورة — سكري الحمل</h3>
+      <p>نورة أُصيبت بسكري الحمل في شهرها السادس. التزمت بالنظام الغذائي، وأنجبت طفلاً سليماً. اليوم:</p>
+      <ul>
+        <li>🚶 تمارس المشي كل صباح.</li>
+        <li>🩺 تفحص سكرها سنوياً.</li>
+        <li>🌟 تُوعّي صديقاتها الحوامل.</li>
+      </ul>
+      <div class="quote">💬 قالت نورة: "سكري الحمل كان تنبيهاً. استمعت له، وغيّرت حياتي."</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🚨 ثالثاً: 7 علامات تحذيرية — بلطف، لا بخوف</h2>
+    <p>قد لا تشعر بأي شيء في البداية. هذا ما يجعل السكري <strong>"صديقاً صامتاً"</strong> 🤫. لكن جسمك — بلطف — يرسل إشارات:</p>
+    <table>
+      <thead>
+        <tr><th>#</th><th>العلامة</th><th>التفسير</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>💧</td><td>العطش الشديد</td><td>جسمك يطلب ماءً أكثر للتخلص من السكر الزائد</td></tr>
+        <tr><td>🚻</td><td>كثرة التبول</td><td>طريقة الجسم لطرد السكر الفائض</td></tr>
+        <tr><td>🍽️</td><td>الجوع المستمر</td><td>خلاياك لا تحصل على الطاقة رغم الأكل</td></tr>
+        <tr><td>⚖️</td><td>فقدان الوزن</td><td>خلاياك "جائعة"، فتأكل من دهونك</td></tr>
+        <tr><td>😴</td><td>التعب والإرهاق</td><td>الطاقة لا تصل لخلاياك بكفاءة</td></tr>
+        <tr><td>🩹</td><td>بطء شفاء الجروح</td><td>الدورة الدموية تتأثر</td></tr>
+        <tr><td>🦶</td><td>تنميل الأطراف</td><td>الأعصاب تحتاج عناية إضافية</td></tr>
+      </tbody>
+    </table>
+    <div class="quote">🎯 الخبر الجيد: كل هذه العلامات <strong>يمكن التعامل معها</strong>، وإذا اكتشفتها مبكراً، تكون النتائج أفضل بكثير.</div>
+  </section>
+
+  <section>
+    <h2>⚠️ رابعاً: المضاعفات — بصدق، لكن بأمل</h2>
+    <p>إذا أُهمل السكري لسنوات، قد تحدث مضاعفات. <strong>لكن — وهذه كلمة مهمة — إذا اعتنيت به، يمكن تجنّبها أو تأجيلها سنوات طويلة.</strong> 💙</p>
+    <table>
+      <thead>
+        <tr><th>العضو</th><th>المضاعفات</th><th>الوقاية</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>🫀 القلب</td><td>نوبات قلبية، سكتات</td><td>رياضة، ضبط الضغط</td></tr>
+        <tr><td>👁️ العيون</td><td>اعتلال الشبكية، ضعف البصر</td><td>فحص سنوي</td></tr>
+        <tr><td>🦵 القدم</td><td>جروح، التهاب، بتر</td><td>عناية يومية</td></tr>
+        <tr><td>🫘 الكلى</td><td>فشل كلوي، غسيل</td><td>تحليل دوري</td></tr>
+        <tr><td>🧠 الأعصاب</td><td>تنميل، ألم مزمن</td><td>ضبط السكر</td></tr>
+      </tbody>
+    </table>
+    <div class="quote">🎯 الرسالة: المضاعفات ليست حتمية. <strong>هي اختيارات.</strong> ومن يتحكم بسكره، يحمي أعضاءه. ✅</div>
+  </section>
+
+  <section>
+    <h2>🎯 خامساً: عوامل الخطر — من يتحكم بها؟</h2>
+    <h3>🔴 عوامل لا تتحكم بها:</h3>
+    <ul>
+      <li>العمر (فوق 45).</li>
+      <li>التاريخ العائلي.</li>
+      <li>العرق (بعض الأعراق أكثر عرضة).</li>
+    </ul>
+    <h3>🟢 عوامل تتحكم بها بالكامل:</h3>
+    <ul>
+      <li>⚖️ وزنك.</li>
+      <li>🏃 نشاطك.</li>
+      <li>🍽️ طعامك.</li>
+      <li>😴 نومك.</li>
+      <li>😰 توترك.</li>
+      <li>🚬 تدخينك.</li>
+    </ul>
+    <div class="quote">🎁 الخبر السار: دراسة <strong>Diabetes Prevention Program</strong> الشهيرة أثبتت أن فقدان <strong>5-7% فقط</strong> من الوزن يخفض خطر الإصابة بالسكري من النوع الثاني بنسبة <strong>58%</strong> — أكثر من الأدوية! 🌟</div>
+  </section>
+
+  <section>
+    <h2>🍎 سادساً: الغذاء — دواؤك اليومي</h2>
+    <p>هنا "مربط الفرس" 🎯. <strong>الغذاء ليس حرماناً، بل اكتشاف.</strong> 🌱</p>
+
+    <h3>🍽️ القاعدة الذهبية: طبقك = صيدليتك 💊</h3>
+    <div class="plate">
+      🥗 <strong>نصف الطبق:</strong> خضروات ملونة<br><br>
+      🍗 <strong>رُبع الطبق:</strong> بروتين (دجاج، سمك)<br><br>
+      🍚 <strong>رُبع الطبق:</strong> نشويات كاملة
+    </div>
+    <div class="quote">🎯 هذه القاعدة البسيطة <strong>تُغني عن عشرات الحميات المعقدة</strong>.</div>
+
+    <h3>✅ 7 أطعمة صديقة للسكري</h3>
+    <p>هذه أطعمة <strong>ليست مسموحة فقط، بل تُساعدك</strong> في التحكم بالسكر:</p>
+    <ol>
+      <li>🥣 <strong>الشوفان</strong> — يبطئ امتصاص السكر.</li>
+      <li>🌿 <strong>القرفة</strong> — تُحسّن حساسية الأنسولين.</li>
+      <li>🥬 <strong>الخضروات الورقية</strong> (سبانخ، كرنب، خس).</li>
+      <li>🫘 <strong>البقوليات</strong> (عدس، فاصوليا، حمص).</li>
+      <li>🥜 <strong>المكسرات</strong> (لوز، جوز، بندق).</li>
+      <li>🐟 <strong>الأسماك الدهنية</strong> (سلمون، سردين، ماكريل).</li>
+      <li>🥑 <strong>الأفوكادو</strong> — دهون صحية + ألياف.</li>
+    </ol>
+    <div class="quote">🎯 القاعدة: لا تحرم نفسك. <strong>أضف</strong> هذه الأطعمة لطبقك. 💚</div>
+
+    <h3>⚠️ 7 أطعمة يجب الحذر منها</h3>
+    <p>ليست محرّمة، لكن <strong>قليلة، نادرة، وبوعي</strong>:</p>
+    <ol>
+      <li>🥤 <strong>المشروبات الغازية</strong> — سكر سائل سريع.</li>
+      <li>🍰 <strong>الحلويات البيضاء</strong> (كيك، بسكويت، دونات).</li>
+      <li>🍞 <strong>الخبز الأبيض</strong> — بديله: أسمر.</li>
+      <li>🍚 <strong>الأرز الأبيض</strong> بكميات كبيرة — بديله: بني.</li>
+      <li>🧃 <strong>العصائر المعلّبة</strong> — سكر + بلا ألياف.</li>
+      <li>🍟 <strong>المقالي</strong> — دهون متحولة.</li>
+      <li>🥫 <strong>الصلصات الجاهزة</strong> — سكر خفي!</li>
+    </ol>
+    <div class="quote">🎯 الرسالة: الوعي يكفي. <strong>لا حرمان.</strong> 💙</div>
+
+    <h3>📊 مؤشر السكر (GI) — بلغة بسيطة</h3>
+    <p>لكل طعام <strong>"سرعة"</strong> في رفع السكر:</p>
+    <ul>
+      <li>🟢 <strong>بطيء (GI منخفض):</strong> صديقك. (عدس، شوفان، خضروات)</li>
+      <li>🟡 <strong>متوسط (GI متوسط):</strong> بكميات معقولة. (أرز بني، معكرونة)</li>
+      <li>🔴 <strong>سريع (GI مرتفع):</strong> نادراً. (خبز أبيض، حلويات)</li>
+    </ul>
+    <div class="quote">🎯 القاعدة الذهبية: 💬 "البطيء صديق. السريع ضيف."</div>
+
+    <h3>📅 جدول يومي عملي</h3>
+    <ul>
+      <li>🌅 <strong>الفطور (7 صباحاً):</strong> شوفان + قرفة + لوز، بيضة مسلوقة، شاي بدون سكر.</li>
+      <li>🍎 <strong>سناك (10 صباحاً):</strong> تفاحة أو حفنة لوز.</li>
+      <li>🍽️ <strong>الغداء (1 ظهراً):</strong> سلطة، دجاج مشوي، أرز بني، لبن زبادي.</li>
+      <li>🍏 <strong>سناك (4 عصراً):</strong> جزر أو خيار.</li>
+      <li>🌙 <strong>العشاء (7 مساءً):</strong> شوربة عدس، سمك مشوي، خضار سوتيه.</li>
+      <li>🌛 <strong>قبل النوم (10 مساءً):</strong> كوب حليب بدون سكر.</li>
+    </ul>
+    <div class="quote">🎯 القاعدة: 3 وجبات + 2 سناك. <strong>لا جوع. لا شبع مفرط.</strong></div>
+
+    <h3>🍳 حيل ذكية للاستبدال</h3>
+    <p>بدل الحرمان، استخدم <strong>البدائل الذكية</strong>:</p>
+    <table>
+      <thead>
+        <tr><th>بدل هذا</th><th>استخدم هذا</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>السكر الأبيض</td><td>ستيفيا أو عسل (بحذر)</td></tr>
+        <tr><td>الخبز الأبيض</td><td>خبز أسمر أو شوفان</td></tr>
+        <tr><td>الأرز الأبيض</td><td>أرز بني أو كينوا</td></tr>
+        <tr><td>العصير</td><td>الفاكهة كاملة</td></tr>
+        <tr><td>المقلاة</td><td>الشوي أو البخار</td></tr>
+        <tr><td>الصلصة الجاهزة</td><td>الليمون والزعتر</td></tr>
+      </tbody>
+    </table>
+    <div class="quote">🎯 الرسالة: ليس ما تحرم منه. بل <strong>ما تستبدله.</strong> ✨</div>
+
+    <div class="story">
+      <h3>🎬 قصة فاطمة ومطبخها</h3>
+      <p>لنعُد إلى <strong>فاطمة</strong>، أم لأربعة، أُصيبت بالسكري في الخمسين.</p>
+      <p>في البداية، خافت من المطبخ 😰. "كيف سأطبخ لعائلتي؟ هل سأحرمهم؟"</p>
+      <p>ثم تعلمت شيئاً واحداً غيّر كل شيء:</p>
+      <div class="quote">💬 "المطبخ ليس عدواً. بل دوائي."</div>
+      <p>اليوم:</p>
+      <ul>
+        <li>🥗 تطبخ نفس الأطباق، لكن بطريقة صحية.</li>
+        <li>🍽️ عائلتها تأكل معها — وتستمتع.</li>
+        <li>🩺 سكرها منتظم.</li>
+        <li>🌟 تُدرّس جاراتها الطبخ الصحي.</li>
+      </ul>
+      <div class="quote">💬 قالت فاطمة: "لم أحرم عائلتي من شيء. بل منحتهم حياة أفضل." 💙</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🏃 سابعاً: الوقاية العامة — خطوات صغيرة</h2>
+    <p>لست بحاجة لتغيير حياتك في يوم واحد. <strong>ابدأ بخطوات صغيرة:</strong></p>
+    <ol>
+      <li>🚶 <strong>خطوة واحدة كل يوم.</strong> امشِ 10 دقائق فقط. ثم زد تدريجياً.</li>
+      <li>💧 <strong>اشرب ماءً أكثر.</strong> بدل العصائر.</li>
+      <li>😴 <strong>نم 7 ساعات.</strong> النوم الجيد ينظّم السكر.</li>
+      <li>🧘 <strong>خصص 5 دقائق للاسترخاء.</strong> التوتر يرفع السكر.</li>
+      <li>🩺 <strong>فحص سنوي.</strong> بسيط، سريع، منقذ للحياة.</li>
+    </ol>
+    <div class="quote">🎯 الرسالة: الوقاية ليست حرماناً. <strong>هي عطاء لجسمك.</strong> 💚</div>
+  </section>
+
+  <section>
+    <h2>🩺 ثامناً: متى تزور الطبيب؟</h2>
+    <p>إذا لاحظت أياً من العلامات التحذيرية، <strong>فلا تخف من الفحص</strong>.</p>
+    <div class="warning">⚠️ الخوف الحقيقي هو <strong>التأجيل</strong>، لا التشخيص.</div>
+    <div class="quote">🎁 زيارة واحدة للطبيب = <strong>طمأنينة + خطة واضحة + بداية جديدة</strong>.</div>
+  </section>
+
+  <section>
+    <h2>🌟 تاسعاً: الخاتمة — رسالة أمل</h2>
+    <p>لنعُد إلى <strong>سالم</strong>، بطل قصتنا.</p>
+    <p>بعد خمس سنوات من التشخيص:</p>
+    <ul>
+      <li>🏃 يمارس الرياضة 5 أيام أسبوعياً.</li>
+      <li>🥗 يأكل بشهية، لكن بوعي.</li>
+      <li>👨‍👩‍👧 يعيش مع عائلته.</li>
+      <li>🌟 يعمل مدرّباً لتوعية مرضى السكري الجدد.</li>
+    </ul>
+    <div class="quote">💬 قال سالم: "السكري لم يأخذ مني حياتي. بل منحني حياة أفضل، لأني أصبحت أهتم بنفسي أكثر."</div>
+    <h3>🎯 الرسالة الأخيرة:</h3>
+    <p>💙 أنت لا تواجه السكري وحدك. الملايين حول العالم يعيشون حياة كاملة، سعيدة، ومنتجة. <strong>وأنت تستطيع.</strong></p>
+    <div class="quote">✨ السكري ليس نهاية. بل بداية جديدة — إن أردت. 🌟</div>
+  </section>
+
+  <section>
+    <h2>📚 المصادر العلمية</h2>
+    <div class="sources">
+      <ul>
+        <li>🌐 WHO — Diabetes Fact Sheet (2023)</li>
+        <li>🌐 IDF Diabetes Atlas — 10th Edition (2021)</li>
+        <li>🌐 CDC — Diabetes Basics &amp; Prevention</li>
+        <li>🌐 ADA — Standards of Care in Diabetes (2023)</li>
+        <li>🌐 NIH — Diabetes Overview</li>
+        <li>🌐 NEJM — Diabetes Complications &amp; Management</li>
+        <li>🌐 Diabetes Prevention Program (DPP) — NEJM, 2002</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>⚠️ تنبيه طبي</h2>
+    <div class="warning">
+      <p><strong>📌 هذا المحتوى للتوعية العلمية فقط، ولا يُغني عن استشارة الطبيب المختص.</strong></p>
+      <p>💊 كل حالة سكري فريدة. ما يناسب شخصاً قد لا يناسب آخر. <strong>استشر طبيبك</strong> قبل أي تغيير في نظامك الغذائي أو دوائك.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>🔗 <a href="https://ahmed9590.github.io/my-website">ahmed9590.github.io</a></p>
+  <p style="margin-top: 12px; opacity: 0.7;">📅 2026</p>
+</footer>
+
+</body>
+</html>
